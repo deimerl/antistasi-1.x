@@ -43,7 +43,7 @@ if (_resourcesAAF > 5000) then{
 					};
 				};
 			} forEach antenasMuertas;
-		}; */ //Stef disabled repair radiotower, the mission is buggy, reduntant and pointless
+		};
 	};
 };
 
