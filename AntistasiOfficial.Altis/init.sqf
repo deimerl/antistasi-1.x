@@ -91,3 +91,5 @@ if(isServer) then {
 
 //Check worldname on dedicated server: is it altis or Altis? Sparker.
 diag_log format ["Antistasi worldName: %1",worldName];
+
+[] spawn compileFinal preprocessFileLineNumbers "setRandomWeather.sqf";

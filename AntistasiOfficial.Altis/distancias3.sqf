@@ -7,7 +7,7 @@ private _hills = colinas - colinasAA;
 
 while {true} do {
 	sleep 1;
-	if (debugperf) then {hint format ["Total Time : %1 for %2 markers", time - _currentTime, count markers]};
+	if (debugperf) then {hint format ["Tiempo transcurrido: %1 para %2 markers", time - _currentTime, count markers]};
 	_currentTime = time;
 
 	waitUntil {!isNil "Slowhand"};
@@ -41,31 +41,30 @@ while {true} do {
 		private _marker = _x;
 		private _markerPos = getMarkerPos _marker;
 
-
 		if (_marker in mrkAAF) then {
 			if !(spawner getVariable _marker) then {
 				//check if a units is near the location or place needs to be forced to spawned in
 				if (({_x distance _markerPos < distanciaSPWN} count _allyUnits > 0) OR (_marker in forcedSpawn)) then {
-					spawner setVariable [_marker, true, true]; //Spawn the place
+					spawner setVariable [_marker,true,true]; //Spawn the place
 					call {
 						if (_marker in _hills) exitWith {[_marker] remoteExec ["createWatchpost", call AS_fnc_getNextWorker]};
 						if (_marker in colinasAA) exitWith {[_marker] remoteExec ["createAAsite", call AS_fnc_getNextWorker]};
 						if (_marker in ciudades) exitWith {[_marker] remoteExec ["createCIV", call AS_fnc_getNextWorker]; [_marker] remoteExec ["createCity", call AS_fnc_getNextWorker]};
 						if (_marker in power) exitWith {[_marker] remoteExec ["createPower", call AS_fnc_getNextWorker]};
 						if (_marker in bases) exitWith {[_marker] remoteExec ["createBase", call AS_fnc_getNextWorker]};
-						if (_marker in controles) exitWith {[_marker, roadblocksEnemy getVariable [_marker, nil]] remoteExec ["createRoadblock2", call AS_fnc_getNextWorker]}; // Server must take the composition of the roadblock from its roadblockEnemy logic object and sends it to the worker
+						//if (_marker in controles) exitWith {[_marker] remoteExec ["createRoadblock", call AS_fnc_getNextWorker]};
+						if (_marker in controles) exitWith {[_marker] remoteExec ["createRoadblock2", call AS_fnc_getNextWorker]};
 						if (_marker in aeropuertos) exitWith {[_marker] remoteExec ["createAirbase", call AS_fnc_getNextWorker]};
 						if ((_marker in recursos) OR (_marker in fabricas)) exitWith {[_marker] remoteExec ["createResources", call AS_fnc_getNextWorker]};
 						if ((_marker in puestos) OR (_marker in puertos)) exitWith {[_marker] remoteExec ["createOutpost", call AS_fnc_getNextWorker]};
 						//if ((_marker in artyEmplacements) AND (_marker in forcedSpawn)) exitWith {[_marker] remoteExec ["createArtillery", call AS_fnc_getNextWorker]};
-                        if (_marker in markerSupplyCrates) exitWith {[_marker] remoteExec ["createSupplyGroup", call AS_fnc_getNextWorker]};
 					};
 				};
 
 			} else { //If place was spawned in already
 				//units only despawn when you get back 50 meters from the point they spawned in.
 				if (({_x distance _markerPos < (distanciaSPWN+50)} count _allyUnits == 0) AND !(_marker in forcedSpawn)) then {
-					spawner setVariable [_marker, false, true];
+					spawner setVariable [_marker,false,true];
 				};
 			};
 		}else{
@@ -85,17 +84,16 @@ while {true} do {
 							if ((_marker in puestos) OR (_marker in puertos)) exitWith {[_marker] remoteExec ["createFIAOutpost", call AS_fnc_getNextWorker]};
 							if (_marker in campsFIA) exitWith {[_marker] remoteExec ["createCampFIA", call AS_fnc_getNextWorker]};
 							if (_marker in puestosNATO) exitWith {[_marker] remoteExec ["createNATOpuesto", call AS_fnc_getNextWorker]};
-                            if (_marker in markerSupplyCrates) exitWith {[_marker] remoteExec ["createSupplyGroup", call AS_fnc_getNextWorker]};
 						};
 					};
 				};
 			} else {
 				if ((({_x distance _markerPos < (distanciaSPWN+50)} count _enemyUnits == 0) AND ({((_x getVariable ["owner",objNull]) == _x) AND (_x distance _markerPos < distanciaSPWN)} count _allyUnits == 0)) AND !(_marker in forcedSpawn)) then {
-					spawner setVariable [_marker, false, true];
+					spawner setVariable [_marker,false,true];
 				};
 			};
 		};
 
-	} forEach (markers + markerSupplyCrates);
+	} forEach markers;
 
 };

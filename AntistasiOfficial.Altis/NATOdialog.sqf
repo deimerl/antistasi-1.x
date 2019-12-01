@@ -7,7 +7,6 @@ if (!([player] call hasRadio)) exitWith {hint localize "STR_HINTS_NATOD_YNARIYIT
 
 // check if FIA controls a radio tower
 // /begin
-/*
 _s = antenas - mrkAAF;
 _c = 0;
 
@@ -24,7 +23,6 @@ if (_c < 1) exitWith {
 	_l1 = ["Radio Operator", "I cannot get NATO on the horn. I might have more luck if I were able to jerry-rig this radio to a proper radio tower..."];
 	[[_l1],"SIDE",0.15] execVM "createConv.sqf";
 };
-*/
 // /end
 
 _bases = bases - mrkAAF;

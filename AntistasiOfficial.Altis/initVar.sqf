@@ -171,7 +171,7 @@ server setVariable ["prestigeCSAT",5,true];//Initial Prestige CSAT
 
 server setVariable ["enableFTold",false,true]; // extended fast travel mode
 server setVariable ["enableMemAcc",false,true]; // simplified arsenal access
-server setVariable ["enableWpnProf",true,true]; // class-based weapon proficiences, MP only
+server setVariable ["enableWpnProf",false,false]; // class-based weapon proficiences, MP only
 
 server setVariable ["easyMode",false,true]; // higher income
 server setVariable ["hardMode",false,true];

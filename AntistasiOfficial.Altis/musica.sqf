@@ -1,6 +1,6 @@
-_normaldia = ["LeadTrack01_F", "LeadTrack01a_F", "LeadTrack01b_F", "LeadTrack02_F", "AmbientTrack03_F", "BackgroundTrack01_F", "BackgroundTrack01a_F", "Track02_SolarPower"];
-_normalnoche = ["Track08_Night_ambient", "Track09_Night_percussions","Track11_StageB_stealth"];
-_combat = ["LeadTrack03_F", "LeadTrack04_F", "LeadTrack04a_F", "LeadTrack05_F", "BackgroundTrack03_F", "Track01_Proteus", "Track07_ActionDark","Track10_StageB_action"];
+_normaldia = ["LeadTrack01_F", "LeadTrack02_F_Malden", "LeadTrack01a_F", "LeadTrack01b_F", "LeadTrack02_F", "AmbientTrack03_F", "BackgroundTrack01_F", "BackgroundTrack01a_F", "Track02_SolarPower", "LeadTrack01_F_Tacops", "LeadTrack02_F_Tacops","LeadTrack04_F_Tacops"];
+_normalnoche = ["Track08_Night_ambient", "Track09_Night_percussions", "Track11_StageB_stealth", "MainTheme_F_Tank", "LeadTrack01_F_Orange","LeadTrack01_F_Tank"];
+_combat = ["LeadTrack01_F", "MainTheme_F_Tank", "LeadTrack01_F_Orange", "LeadTrack01_F_Tank", "LeadTrack03_F", "LeadTrack04_F", "LeadTrack05_F", "BackgroundTrack03_F", "Track01_Proteus", "Track07_ActionDark","Track10_StageB_action", "LeadTrack01_F_Tacops", "LeadTrack02_F_Tacops","LeadTrack04_F_Tacops"];
 _stealth = ["LeadTrack06_F", "AmbientTrack01_F", "AmbientTrack01a_F", "AmbientTrack01b_F", "AmbientTrack04a_F", "AmbientTrack04_F", "Track04_Underwater1","Track05_Underwater2"];
 
 

@@ -3,13 +3,13 @@
 	<Package name="MissionNames">
 		<Container name="MissionNames_0">
 			<Key ID="STR_MISSION_NAME_SQM">
-				<Original>[SP/CO]- Antistasi 1.8.0.10 Altis Blufor</Original>
+				<Original>[SP/CO]- Antistasi 1.8.0.9 Altis Blufor</Original>
 			</Key>
 			<Key ID="STR_MISSION_NAME_INITVAR_SQF">
-				<Original>v 1.8.0.10</Original>
+				<Original>v 1.8.0.9</Original>
 			</Key>
 			<Key ID="STR_MISSION_NAME_EXT">
-				<Original>Antistasi 1.8.0.10</Original>
+				<Original>Antistasi 1.8.0.9</Original>
 			</Key>
 		</Container>
 	</Package>
@@ -460,32 +460,26 @@
 			<Key ID="STR_GL_AAFOP">
 				<Original>AAF Outpost</Original>
 				<Russian>ОП AAF</Russian>
-                <Spanish>Puesto AAF</Spanish>
 			</Key>
 			<Key ID="STR_GL_AAFBS">
 				<Original>AAF Base</Original>
 				<Russian>В/база AAF</Russian>
-                <Spanish>Base AAF</Spanish>
 			</Key>
 			<Key ID="STR_GL_AAFAB">
 				<Original>AAF Airport</Original>
 				<Russian>А/база AAF</Russian>
-                <Spanish>Aeródromo AAF</Spanish>
 			</Key>
 			<Key ID="STR_GL_FIARB">
 				<Original>FIA Roadblock</Original>
 				<Russian>БП FIA</Russian>
-                <Spanish>Control FIA</Spanish>
 			</Key>
 			<Key ID="STR_GL_FIAWP">
 				<Original>FIA Watchpost</Original>
 				<Russian>НП FIA</Russian>
-                <Spanish>Observación FIA</Spanish>
 			</Key>
 			<Key ID="STR_GL_NATORB">
 				<Original>NATO Roadblock</Original>
 				<Russian>БП НАТО</Russian>
-                <Spanish>Control OTAN</Spanish>
 			</Key>
 		</Container>
 	</Package>
@@ -3287,7 +3281,7 @@
 			<Key ID="STR_D_BUY_LVEH">
 				<Original>Light Transport</Original>
 				<Russian>Light Transport</Russian>
-				<Spanish>Transporte Ligero</Spanish>
+				<Spanish>Light Transport</Spanish>
 			</Key>
 			<Key ID="STR_D_BUY_ST_AT">
 				<Original>Static AT</Original>
