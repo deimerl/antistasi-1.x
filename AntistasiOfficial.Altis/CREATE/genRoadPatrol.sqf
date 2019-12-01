@@ -7,7 +7,7 @@ _allGroups = [];
 _allSoldiers = [];
 
 //Stef 17/10 Remove speedboats when RHS is active
-_vehicleArray = vehPatrol + (if (activeAFRF) then {[]} else {vehPatrolBoat}) - heli_unarmed;
+_vehicleArray = vehPatrol + vehPatrolBoat;
 
 while {true} do {
 	_vehicleType = selectRandom _vehicleArray;

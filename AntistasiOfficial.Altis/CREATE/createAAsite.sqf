@@ -24,7 +24,7 @@ _objs = [_posCmp, 0, _cmp] call BIS_fnc_ObjectsMapper;
 		if (typeOf _x == opSPAA) exitWith {_SPAA = _x; _allVehicles pushBack _x; _hasSPAA = true};
 		if (typeOf _x == opTruck) exitWith {_truck = _x; _allVehicles pushBack _truck};
 		if (typeOf _x in [statMG, statAT, statAA, statAA2, statMGlow, statMGtower]) exitWith {_statics pushBack _x};
-		//if (typeOf _x == statMortar) exitWith {_statics pushBack _x; [_x] execVM "scripts\UPSMON\MON_artillery_add.sqf"}; Stef removed mortar from Hilltop
+		if (typeOf _x == statMortar) exitWith {_statics pushBack _x; [_x] execVM "scripts\UPSMON\MON_artillery_add.sqf"};
 		if (typeOf _x == opCrate) exitWith {_crate = _x; _allVehicles pushBack _x};
 		if (typeOf _x == opFlag) exitWith {_allVehicles pushBack _x};
 	};
