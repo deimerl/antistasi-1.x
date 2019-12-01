@@ -23,7 +23,6 @@ _group = createGroup side_blue;
 _allGroups pushBack _group;
 
 
-/* Disable NATO Garrison, wanna make NATO garrisoning a choice, not just by default.. untill capturing a base will be a real deal.
 //NATO Garrison
 	//Turrets
 	for "_i" from 0 to (count _buildings) - 1 do {
@@ -134,7 +133,6 @@ _allGroups pushBack _group;
 		_counter = _counter + 1;
 	};
 };
-*/
 
 //Create groups for FIA garrison
 	_gunnerGroup = createGroup side_blue;

@@ -19,7 +19,6 @@ _support = (server getVariable "prestigeNATO")/100;
 _buildings = nearestObjects [_markerPos, listMilBld, _size*1.5];
 _statics = staticsToSave select {_x distance _markerPos < (_size max 50)};
 
-/* Stef Disable NATO Garrison: it spawn too many units and it's generally too easy to capture bases
 //NATO Garrison
 	//Aircraft
 		if (count _buildings > 1) then {
@@ -137,7 +136,6 @@ _statics = staticsToSave select {_x distance _markerPos < (_size max 50)};
 				};
 			};
 		};
-*/
 
 //Create groups for FIA garrison
 	_gunnerGroup = createGroup side_blue;
