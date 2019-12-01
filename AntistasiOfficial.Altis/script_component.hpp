@@ -1,3 +1,4 @@
-#define PREFIX ANTISTASI
-#define DEBUG_MODE_NORMAL
-#include "script_macros_mission.hpp"
+#define COMPONENT Functions
+//#define DEBUG_SYNCHRONOUS
+//#define DEBUG_MODE_FULL
+#include "..\script_component.hpp"
